@@ -17,6 +17,7 @@ const path = require("path");
 // console.log(path.extname("index.c"));
 const joinName = path.join(__dirname + "/view");
 console.log(joinName);
+
 // =========== write file ==============
 // fs.writeFile("delete.txt", "hello world", (err) => {
 //   if (err) {
