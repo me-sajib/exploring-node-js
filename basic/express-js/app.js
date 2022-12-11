@@ -12,6 +12,12 @@ app.get("/", (req, res) => {
   res.send("<h2>hello express</h2>");
 });
 
+// demo product id params
+app.get("/product/:id([0-9]+)", (req, res) => {
+  const id = req.params.id;
+  res.send("ID is " + id);
+});
+
 // show login page
 app.get("/login", (req, res) => {
   res.sendFile(__dirname + "/index.html");
