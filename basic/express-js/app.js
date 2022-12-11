@@ -8,7 +8,13 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.get("/", (req, res) => {
+// middleware
+const myMiddleWare = (req, res, next) => {
+  console.log("middleware function");
+  next();
+};
+
+app.get("/", myMiddleWare, (req, res) => {
   res.send("<h2>hello express</h2>");
 });
 
