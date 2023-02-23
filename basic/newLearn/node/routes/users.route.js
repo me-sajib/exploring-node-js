@@ -1,7 +1,8 @@
 const router = require("express").Router();
 
 router.get("/users", (req, res) => {
-    res.send("All user show, wow your user <h1>300M +</h1>");
+    res.statusCode = 200;
+    res.send("<h1>Users pages</h1>")
 })
 
 module.exports = router;

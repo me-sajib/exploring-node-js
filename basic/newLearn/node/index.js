@@ -1,7 +1,7 @@
 const app = require("./app");
-const PORT = 3000;
+const PORT = 4000;
 
 
 app.listen(PORT, () => {
-    console.log("I'm running 3000 port");
+    console.log("I'm running 4000 port");
 })
