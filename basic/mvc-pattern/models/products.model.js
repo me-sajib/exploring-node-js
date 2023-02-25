@@ -1,0 +1,1 @@
+exports.allProducts = [{ name: "T-shirt", price: 220 }, { name: "Pant", price: 300 }];
