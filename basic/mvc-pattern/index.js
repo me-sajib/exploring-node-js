@@ -1,16 +1,20 @@
 const express = require('express');
+const cors = require('cors');
+const userRoute = require('./routes/users.route');
+const productRoute = require('./routes/products.route');
 const app = express();
 const PORT = 4000;
 
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
-app.get("/", (req, res) => {
-    res.send("Hello from express router");
-})
+app.use(userRoute);
+app.use(productRoute)
 
-app.use((req, res, next) => {
+app.use((req, res) => {
     res.send({
-        error: "Router not match"
+        success: "Fail",
+        error: "No route match"
     })
 })
 
