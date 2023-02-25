@@ -9,3 +9,7 @@
 - middleware
 - cors
 - body parser
+- dotenv
+- MVC (Model View Controller)
+- MongoDB
+- Mongoose
